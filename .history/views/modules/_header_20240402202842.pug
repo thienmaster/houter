@@ -1,0 +1,19 @@
+header.header
+  img.color-blur.color-blur-1(src="./images/color-blur-1.svg", alt="color-blur-1")
+  img.color-blur.color-blur-2(src="./images/color-blur-2.svg", alt="color-blur-2")
+  .container
+    .header-top
+      //- Logo
+      a.logo(href="./")
+        img.logo-image(src="../images/logo.svg", alt="logo_hunter")
+        span.logo-text Houter
+      //- Menu
+      nav.header-menu
+        ul.header-menu-list
+          each menu in [{href: "#!", title: "About Us"}, {href: "#!", title: "Article"}, {href: "#!", title: "Property"}]
+            li.header-menu-item
+              a.header-menu-link.button(href= menu.href)= menu.title
+      //- Button
+      a.button.header-button.button-green-100(href="#!") Sign Up!
+    include ./_hero
+

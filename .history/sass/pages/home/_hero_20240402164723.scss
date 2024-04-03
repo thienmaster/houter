@@ -1,0 +1,31 @@
+@use "../../abstracts" as abst;
+
+.hero {
+  margin-top: 110px;
+
+  &-content {
+    max-width: 36%;
+  }
+
+  &-heading {
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: abst.$App-Headline;
+    // -webkit-text-stroke: 1.5px abst.$App-Headline;
+    font-size: 40px;
+    line-height: normal;
+    text-transform: capitalize;
+
+    span {
+      -webkit-text-stroke: 1.5px white;
+      // -webkit-text-stroke-width: 1.5px;
+      // -webkit-text-stroke-color: #fff;
+    }
+  }
+
+  &-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+  }
+}

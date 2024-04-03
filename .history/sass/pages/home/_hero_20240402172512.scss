@@ -1,0 +1,75 @@
+@use "../../abstracts" as abst;
+
+.hero {
+  margin-top: 110px;
+
+  &-content {
+    max-width: 42%;
+  }
+
+  &-heading {
+    // -webkit-text-stroke-width: 1px;
+    // -webkit-text-stroke-color: abst.$App-Headline;
+    -webkit-text-stroke: 1px abst.$App-Headline;
+    font-size: 40px;
+    line-height: normal;
+    text-transform: capitalize;
+    max-width: 355px;
+
+    span {
+      color: transparent;
+    }
+  }
+
+  &-caption {
+    font-size: 16px;
+    line-height: calc(28 / 16);
+    opacity: 0.75;
+    margin-block: 24px 32px;
+  }
+
+  &-search {
+    @include abst.flexBox(((align-items: center, gap: 16px)));
+    padding: 4px 4px 4px 24px;
+    border-radius: 32px;
+    border: 1px solid abst.$Neutral-300;
+    background-color: #fff;
+    margin-bottom: 32px;
+
+    &-text {
+      color: abst.$Neutral-500;
+      @include abst.fontWeight("medium");
+      line-height: calc(22 / 14);
+      flex: 1 0 0;
+      opacity: 0.8;
+    }
+
+    &-button {
+      @include abst.flexBox(
+        ((align-items: center, gap: 4px, justify-content: center))
+      );
+      color: #fff;
+      padding: 12px 16px;
+      @include abst.fontWeight("semibold");
+      line-height: calc(22 / 14);
+      cursor: pointer;
+    }
+  }
+
+  &-partner {
+    color: abst.$Neutral-500;
+    font-size: 16px;
+    line-height: calc(32 / 16);
+
+    &-list {
+      display: flex;
+    }
+  }
+
+  &-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+  }
+}

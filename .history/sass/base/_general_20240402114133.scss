@@ -1,0 +1,23 @@
+@use "../abstracts" as abst;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: abst.$font-primary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}

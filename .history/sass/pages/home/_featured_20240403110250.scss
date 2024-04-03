@@ -1,0 +1,12 @@
+@use "../../abstracts" as abst;
+
+.featured {
+  margin-block: 240px 120px;
+
+  &-tagline {
+    position: relative;
+
+    &:before {
+    }
+  }
+}

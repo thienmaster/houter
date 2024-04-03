@@ -1,0 +1,16 @@
+header.header
+  .container
+    .header-top
+      //- Logo
+      a.logo(href="./")
+        img.logo-image(src="", alt="")(src="../../images/logo.svg", alt="logo_houter")
+        span.logo-text Houter
+      //- Menu
+      nav.header-menu
+        ul.header-menu-list
+          each menu in [{href: "#!", title: "About Us"}, {href: "#!", title: "Article"}, {href: "#!", title: "Property"}]
+            li.header-menu-item
+              a.header-menu-link(href= menu.href)= menu.title
+      //- Button
+      a.button.button-green-100(href="#!") Sign Up!
+

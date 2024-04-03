@@ -1,0 +1,165 @@
+@use "../../abstracts" as abst;
+
+.hero {
+  margin-top: 110px;
+
+  &-content {
+    max-width: 42%;
+  }
+
+  &-heading {
+    // -webkit-text-stroke-width: 1px;
+    // -webkit-text-stroke-color: abst.$App-Headline;
+    -webkit-text-stroke: 1px abst.$App-Headline;
+    font-size: 40px;
+    line-height: normal;
+    text-transform: capitalize;
+    max-width: 355px;
+
+    span {
+      color: transparent;
+    }
+  }
+
+  &-caption {
+    font-size: 16px;
+    line-height: calc(28 / 16);
+    opacity: 0.75;
+    margin-block: 24px 32px;
+  }
+
+  &-search {
+    @include abst.flexBox(((align-items: center, gap: 16px)));
+    padding: 4px 4px 4px 24px;
+    border-radius: 32px;
+    border: 1px solid abst.$Neutral-300;
+    background-color: #fff;
+    margin-bottom: 32px;
+
+    &-text {
+      color: abst.$Neutral-500;
+      @include abst.fontWeight("medium");
+      line-height: calc(22 / 14);
+      flex: 1 0 0;
+      opacity: 0.8;
+    }
+
+    &-button {
+      @include abst.flexBox(((align-items: center, gap: 4px)));
+      color: #fff;
+      padding: 12px 16px;
+      @include abst.fontWeight("semibold");
+      line-height: calc(22 / 14);
+      cursor: pointer;
+    }
+  }
+
+  &-partner {
+    color: abst.$Neutral-500;
+    font-size: 16px;
+    line-height: calc(32 / 16);
+
+    &-list {
+      @include abst.flexBox(((align-items: center, gap: 32px)));
+    }
+  }
+
+  &-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    overflow-x: hidden;
+  }
+
+  &-vector {
+    position: absolute;
+
+    &-red {
+      left: 82px;
+      top: 139px;
+    }
+
+    &-yellow {
+      right: 124px;
+      top: 209.5px;
+    }
+
+    &-blue {
+      right: 112px;
+      bottom: 236px;
+    }
+  }
+
+  &-info {
+    // display: grid;
+    // grid-auto-columns: auto;
+    // grid-auto-flow: column;
+    // overflow-x: auto;
+    // overflow-y: hidden;
+    // scroll-snap-type: x mandatory;
+    // scroll-snap-stop: always;
+    // column-gap: 16px;
+    @include abst.flexBox(((align-items: center, gap: 16px)));
+    width: 872px;
+    align-items: center;
+    position: absolute;
+    left: 48px;
+    bottom: 48px;
+
+    &-content {
+      @include abst.flexBox(((align-items: center, gap: 16px)));
+      border-radius: 32px;
+      background-color: #fff;
+      box-shadow: 0px 11px 48px 0px rgba(51, 51, 51, 0.06);
+      padding: 24px;
+      cursor: pointer;
+      transition: all 0.2s linear;
+      transform: translateY(0);
+
+      &:hover {
+        transform: translateY(-20px);
+      }
+
+      &:nth-of-type(2) {
+        width: 202px;
+      }
+    }
+
+    &-left {
+      @include abst.flexBox(((align-items: center)));
+    }
+
+    &-image {
+      @include abst.size(56px);
+      border-radius: 100rem;
+      border: 3px solid #fff;
+      box-shadow: 0px 9px 32px 0px rgba(89, 92, 219, 0.1);
+
+      &-2,
+      &-3 {
+        margin-left: -27px;
+      }
+    }
+
+    &-title {
+      color: abst.$App-Headline;
+      font-size: 16px;
+      @include abst.fontWeight("semibold");
+      line-height: calc(24 / 16);
+      margin-bottom: 2px;
+    }
+
+    &-desc {
+      color: abst.$App-Subheadline;
+      font-size: 12px;
+      line-height: calc(20 / 12);
+    }
+
+    &-house {
+      border: none;
+      border-radius: 24px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
+}

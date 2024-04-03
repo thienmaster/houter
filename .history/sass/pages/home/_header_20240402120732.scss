@@ -1,0 +1,5 @@
+@use "../../abstracts" as abst;
+
+.header {
+  background-color: abst.$Red-100;
+}

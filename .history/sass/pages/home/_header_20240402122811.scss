@@ -1,0 +1,20 @@
+@use "../../abstracts" as abst;
+
+.header {
+  &-top {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+
+    & .logo {
+      @include abst.flexBox(((align-items: center, gap: 12px)));
+
+      &-text {
+        color: abst.$App-Headline;
+        font-size: 16px;
+        @include abst.fontWeight("bold");
+        line-height: normal;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use "../../abstracts" as abst;
+
+.hero {
+  margin-top: 110px;
+
+  &-content {
+    max-width: 42%;
+  }
+
+  &-heading {
+    // -webkit-text-stroke-width: 1px;
+    // -webkit-text-stroke-color: abst.$App-Headline;
+    -webkit-text-stroke: 1px abst.$App-Headline;
+    font-size: 40px;
+    line-height: normal;
+    text-transform: capitalize;
+    max-width: 355px;
+
+    span {
+      color: transparent;
+    }
+  }
+
+  &-caption {
+    font-size: 16px;
+    line-height: calc(28 / 16);
+    opacity: 0.75;
+    margin-block: 24px 32px;
+  }
+
+  &-search {
+    @include abst.flexBox(((align-items: center, gap: 16px)));
+
+    &-left {
+      @include abst.flexBox(((align-items: center, gap: 16px)));
+    }
+  }
+
+  &-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+  }
+}

@@ -1,0 +1,23 @@
+//- /*---------- Mixin Featured Item ----------*/
+mixin featuredItem(image, alt, icon = '', status, namehouse, price, person_image, person_alt, person_name, person_address)
+  li.featured-item
+    .featured-image
+      img(src= image, alt= alt)
+      .button.featured-status
+        if icon
+          case icon
+            when 'icon-fire'
+              include ../icons/_icon-fire
+            when 'icon-house'
+              include ../icons/_icon-house
+            when 'icon-wallet'
+              include ../icons/_icon-wallet
+        span= status
+    .featured-info
+      .featured-namehouse= namehouse
+      .featured-price= price
+    .featured-person
+      img.featured-person-image(src= person_image, alt= person_alt)
+      .featured-person-info
+        .featured-person-name= person_name
+        .featured-person-address= person_address

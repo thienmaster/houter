@@ -1,0 +1,19 @@
+@use "../../abstracts" as abst;
+
+.featured {
+  margin-block: 240px 120px;
+
+  &-tagline {
+    position: relative;
+    text-align: left;
+
+    &::before {
+      content: "";
+      @include abst.size(32px, 1px);
+      color: abst.$Yellow-500;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,180 @@
+@use "../../abstracts" as abst;
+
+.detail {
+  position: relative;
+
+  &-container {
+    position: relative;
+  }
+
+  &-blur {
+    & img:first-of-type,
+    & img:last-of-type {
+      position: absolute;
+    }
+
+    & img:first-of-type {
+      right: 0;
+      top: -280px;
+      z-index: -2;
+    }
+
+    & img:last-of-type {
+      right: 0;
+      top: -170px;
+      z-index: -1;
+    }
+  }
+
+  &-tagline {
+    position: relative;
+    text-align: left;
+    padding-left: 40px;
+
+    &::before {
+      content: "";
+      @include abst.size(32px, 1px);
+      background-color: abst.$Yellow-500;
+      position: absolute;
+      left: 0;
+      top: 50%;
+    }
+  }
+
+  &-content {
+    max-width: 525px;
+    padding-left: 40px;
+  }
+
+  &-heading {
+    margin-block: 12px 16px;
+    font-size: 32px;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  &-caption,
+  &-house {
+    font-size: 16px;
+    line-height: calc(28 / 16);
+    opacity: 0.75;
+  }
+
+  &-caption {
+    max-width: 420px;
+    margin-bottom: 16px;
+  }
+
+  &-house {
+    color: abst.$App-Headline;
+    @include abst.fontWeight("semibold");
+    margin-top: 16px;
+  }
+
+  &-top,
+  &-bottom {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+    max-width: 413px;
+  }
+
+  &-top {
+    margin: 16px 0;
+  }
+
+  &-left,
+  &-right {
+    @include abst.flexBox(((align-items: center, gap: 16px)));
+    color: abst.$Neutral-700;
+    font-size: 16px;
+    line-height: normal;
+    @include abst.fontWeight("medium");
+  }
+
+  &-info {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+    border-top: 440px solid abst.$Neutral-100;
+    // width: 440px;
+    margin-top: 32px;
+    padding-top: 32px;
+  }
+
+  &-person {
+    @include abst.flexBox(((align-items: center, gap: 16px)));
+
+    &-image {
+      @include abst.size(56px);
+      border-radius: 100rem;
+      box-shadow: 0px 9px 32px 0px rgba(89, 92, 219, 0.1);
+    }
+
+    &-name {
+      color: abst.$Neutral-900;
+      font-size: 18px;
+      @include abst.fontWeight("medium");
+      line-height: calc(24 / 18);
+      margin-bottom: 4px;
+    }
+
+    &-bio {
+      color: abst.$Neutral-500;
+      @include abst.fontWeight("medium");
+      font-size: 16px;
+      line-height: calc(22 / 16);
+    }
+  }
+
+  &-contact {
+    @include abst.flexBox(((align-items: center, gap: 16px)));
+    padding: 12px 16px;
+    color: #fff;
+    @include abst.fontWeight("semibold");
+    line-height: calc(22 / 14);
+  }
+
+  &-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    & img:nth-of-type(2) {
+      position: absolute;
+      left: -40px;
+      top: 291px;
+    }
+
+    & img:nth-of-type(3) {
+      position: absolute;
+      right: 124px;
+      top: 379px;
+    }
+
+    & img:last-of-type {
+      position: absolute;
+      right: 20px;
+      top: 379px;
+    }
+  }
+
+  &-icon {
+    @include abst.size(48px);
+    @include abst.flexBox(((align-items: center, justify-content: center)));
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 100rem;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s linear;
+
+    &:hover {
+      color: abst.$App-Headline;
+      background-color: #fff;
+    }
+  }
+}

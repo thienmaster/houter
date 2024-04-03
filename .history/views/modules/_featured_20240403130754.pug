@@ -1,0 +1,33 @@
+-
+  var featured_list = [
+    {image: "./images/featured/featured_1.svg", alt: "Roselands House", icon: "icon-fire", status: "Popular", namehouse: "Roselands House", price: "$ 35.000.000", person_image: "./images/featured/featured_people_1.jpg", person_alt: "Dianne Russell", person_name: "Dianne Russell", person_address: "Manchester, Kentucky"},
+
+    {image: "./images/featured/featured_2.svg", alt: "Woodlandside", icon: "icon-house", status: "New House", namehouse: "Woodlandside", price: "$ 20.000.000", person_image: "./images/featured/featured_people_2.jpg", person_alt: "Robert Fox", person_name: "Robert Fox", person_address: "Dr. San Jose, South Dakota"},
+
+    {image: "./images/featured/featured_3.svg", alt: "The Old Lighthouse", icon: "icon-wallet", status: "Best Deals", namehouse: "The Old Lighthouse", price: "$ 44.000.000", person_image: "./images/featured/featured_people_3.jpg", person_alt: "Ronald Richards", person_name: "Ronald Richards", person_address: "Santa Ana, Illinois"},
+
+    {image: "./images/featured/featured_4.svg", alt: "Cosmo's House", icon: "icon-fire", status: "Popular", namehouse: "Cosmo's House", price: "$ 22.000.000", person_image: "./images/featured/featured_people_4.jpg", person_alt: "Jenny Wilson", person_name: "Jenny Wilson", person_address: "Preston Rd. Inglewood, Maine 98380"},
+  ];
+
+section.featured
+  .container
+    h3.tagline.featured-tagline Our Recommendation
+    .featured-top
+      h2.heading.featured-heading Featured House
+      .featured-type
+        button.button.featured-button.featured-button-house
+          include ../icons/_icon-house-green
+          span House
+        button.button.featured-button.featured-button-villa
+          include ../icons/_icon-villa
+          span Villa
+        button.button.featured-button.featured-button-apartment
+          include ../icons/_icon-apartment
+          span Apartment
+      .featured-controls
+        each button in [1,2]
+          .button.featured-controls-button
+            include ../icons/_icon-chevron
+    ul.featured-list
+      each featured_item in featured_list
+        +featuredItem(featured_item.image, featured_item.alt, featured_item.icon, featured_item.status, featured_item.namehouse, featured_item.price, featured_item.person_image, featured_item.person_alt, featured_item.person_name, featured_item.person_address)

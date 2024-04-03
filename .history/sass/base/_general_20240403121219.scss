@@ -1,0 +1,60 @@
+@use "../abstracts" as abst;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: abst.$font-primary;
+  color: abst.$App-Neutral-01;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.heading {
+  color: abst.$App-Headline;
+  @include abst.fontWeight("semibold");
+}
+
+.tagline {
+  text-align: center;
+  color: abst.$Yellow-500;
+  @include abst.fontWeight("medium");
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.button {
+  all: unset;
+  color: abst.$Neutral-500;
+  border-radius: 32px;
+  width: fit-content;
+
+  &-green-100 {
+    background-color: abst.$Green-100;
+  }
+
+  &-green-500 {
+    background-color: abst.$Green-500;
+  }
+
+  &-neutral {
+    background-color: abst.$Neutral-300;
+  }
+
+  &-blue {
+    background-color: abst.$Blue-100;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Pug Command",
+      "type": "shell",
+      "command": "pug index.pug --watch --pretty"
+    },
+
+    {
+      "label": "Run Sass Command",
+      "type": "shell",
+      "command": "sass sass/app.scss styles/app.css --watch"
+    }
+  ]
+}

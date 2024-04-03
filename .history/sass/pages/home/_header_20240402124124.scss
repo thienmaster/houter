@@ -1,0 +1,41 @@
+@use "../../abstracts" as abst;
+
+.header {
+  padding-top: 40px;
+
+  &-top {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+
+    & .logo {
+      @include abst.flexBox(((align-items: center, gap: 12px)));
+
+      &-text {
+        color: abst.$App-Headline;
+        font-size: 16px;
+        @include abst.fontWeight("bold");
+        line-height: normal;
+      }
+    }
+  }
+
+  &-menu {
+    margin-left: auto;
+    margin-right: 56px;
+
+    &-list {
+      @include abst.flexBox(((align-items: center, gap: 24px)));
+    }
+
+    &-link {
+      display: inline-block;
+      color: abst.$Neutral-100;
+      @include abst.fontWeight("semibold");
+      line-height: normal;
+      padding: 8px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}

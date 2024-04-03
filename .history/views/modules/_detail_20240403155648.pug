@@ -1,0 +1,24 @@
+section.detail
+  .container
+    h3.tagline.detail-tagline Ready to Sell
+    .detail-content
+      h2.heading.detail-heading Let’s tour and see our house!
+      p.detail-caption Houses recommended by our partners that have been curated to become the home of your dreams!
+      span.detail-house House Detail
+        .detail-top
+          .detail-left
+            include ../icons/_icon-bed
+            span 4 Bedrooms
+          .detail-right
+            include ../icons/_icon-bath
+            span 2 Bathrooms
+        .detail-bottom
+          .detail-left
+            include ../icons/_icon-car-garage
+            span 1 Carport
+          .detail-right
+            include ../icons/_icon-stairs
+            span 2 Floors
+    .detail-image
+      each image in [{src: "./images/detail/detail.svg", alt: "detail_1"},{src: "./images/detail/detail_2.svg", alt: "detail_2"},{src: "./images/detail/detail_3.svg", alt: "detail_3"},{src: "./images/detail/detail_4.svg", alt: "detail_4"}]
+        img(src= image.src, alt= image.alt)

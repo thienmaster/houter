@@ -1,0 +1,9 @@
+@use "../../abstracts" as abst;
+
+.header {
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

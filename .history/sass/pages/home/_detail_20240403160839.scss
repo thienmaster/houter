@@ -1,0 +1,97 @@
+@use "../../abstracts" as abst;
+
+.detail {
+  &-container {
+    position: relative;
+  }
+
+  &-tagline {
+    position: relative;
+    text-align: left;
+    padding-left: 40px;
+
+    &::before {
+      content: "";
+      @include abst.size(32px, 1px);
+      background-color: abst.$Yellow-500;
+      position: absolute;
+      left: 0;
+      top: 50%;
+    }
+  }
+
+  &-heading {
+    margin-block: 12px 16px;
+    font-size: 32px;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  &-caption,
+  &-house {
+    font-size: 16px;
+    line-height: calc(28 / 16);
+    opacity: 0.75;
+  }
+
+  &-caption {
+    max-width: 413px;
+  }
+
+  &-house {
+    color: abst.$App-Headline;
+    @include abst.fontWeight("semibold");
+  }
+
+  &-top,
+  &-bottom {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+    // max-width: 413px;
+  }
+
+  &-top {
+    margin-bottom: 16px;
+  }
+
+  &-left,
+  &-right {
+    @include abst.flexBox(((align-items: center, gap: 16px)));
+    color: abst.$Neutral-700;
+    font-size: 16px;
+    line-height: normal;
+    @include abst.fontWeight("medium");
+  }
+
+  &-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    & img:nth-of-type(2) {
+      position: absolute;
+      left: -40px;
+      top: 291px;
+    }
+
+    & img:nth-of-type(3) {
+      position: absolute;
+      right: 124px;
+      top: 379px;
+    }
+
+    & img:last-of-type {
+      position: absolute;
+      right: 20px;
+      top: 379px;
+    }
+
+    & .detail-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
