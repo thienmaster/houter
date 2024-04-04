@@ -649,4 +649,119 @@ body {
   background-color: #fff;
 }
 
+.about {
+  margin-block: 240px 120px;
+  position: relative;
+}
+.about-tagline {
+  position: relative;
+  padding-top: 8px;
+}
+.about-tagline::before {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background-color: #f59e0b;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.about-heading {
+  text-align: center;
+  font-size: 32px;
+  line-height: normal;
+  margin-block: 12px 40px;
+}
+.about-list {
+  display: grid;
+  grid-auto-columns: 740px;
+  grid-auto-flow: column;
+  gap: 56px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
+  min-height: 505px;
+}
+.about-list::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+.about-list > * {
+  scroll-snap-align: start;
+}
+.about-item {
+  position: relative;
+}
+.about-info {
+  width: 612px;
+  height: 249px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0px 9px 32px 0px rgba(89, 92, 219, 0.05);
+  position: absolute;
+  top: 256px;
+  left: 64px;
+}
+.about-title {
+  font-size: 20px;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.about-caption {
+  line-height: 1.7142857143;
+  opacity: 0.75;
+  margin-block: 16px 24px;
+}
+.about-person {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-person-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 100rem;
+  box-shadow: 0px 9px 32px 0px rgba(89, 92, 219, 0.1);
+}
+.about-person-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.about-person-name, .about-person-bio {
+  font-weight: 500;
+  line-height: 1.5714285714;
+}
+.about-person-name {
+  color: #0e1735;
+}
+.about-person-bio {
+  color: #888b97;
+}
+.about-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.about-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.about-point {
+  color: #3c4563;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.about-dot {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=app.css.map */

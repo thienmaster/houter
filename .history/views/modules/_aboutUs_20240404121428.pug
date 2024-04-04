@@ -1,0 +1,17 @@
+-
+  var about_list = [
+    {image: "./images/about/about.svg", alt: "My House Sold Out Fast!", title: "My House Sold Out Fast!", caption: "I was finally able to sell my house quickly through Hounter by immediately setting me up with people who wanted my house. I also do not get a discount from the sale of my house. Awesome!", person_image: "./images/about/about_people.jpg", person_alt: "Courtney Henry", person_name: "Courtney Henry", person_bio: "CEO Andarafish", point: "4.3"},
+
+    {image: "./images/about/about_2.svg", alt: "Best! I got the house I wanted through Hounter", title: "Best! I got the house I wanted through Hounter", caption: "Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want.", person_image: "./images/about/about_people_2.jpg", person_alt: "Dianne Russell", person_name: "Dianne Russell", person_bio: "Manager Director", point: "4.6"},
+
+    {image: "./images/about/about_3.svg", alt: "Through the Hounter, I can get a house for my self", title: "Through the Hounter, I can get a house for my self", caption: "By looking for information about what kind of house we want, we managed to get the house we wanted very quickly, and directly connected with the seller to be able to ask about the details, very helpful!", person_image: "./images/about/about_people_3.jpg", person_alt: "Esther Howard", person_name: "Esther Howard", person_bio: "Head of Marketing", point: "4.6"}
+  ];
+
+section.about
+  h3.tagline.about-tagline See Our Review
+  h2.heading.about-heading What Our User Say About Us
+  ul.about-list
+    each about_item in about_list
+      +aboutItem(about_item.image, about_item.alt, about_item.title, about_item.caption, about_item.person_image, about_item.person_alt, about_item.person_name, about_item.person_bio, about_item.point)
+  .about-dot
+    include ../icons/_icon-dot

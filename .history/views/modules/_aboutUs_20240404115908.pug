@@ -1,0 +1,21 @@
+section.about
+  h3.tagline.about-tagline See Our Review
+  h2.heading.about-heading What Our User Say About Us
+  ul.about-list
+    each val in [1,2,3]
+      li.about-item
+        img.about-image(src="./images/about/about.svg", alt="My house sold out fast!")
+        .about-info
+          h3.heading.about-title My house sold out fast!
+          p.about-caption I was finally able to sell my house quickly through Hounter by immediately setting me up with people who wanted my house. I also do not get a discount from the sale of my house. Awesome!
+          .about-person
+            .about-left
+              img.about-person-image(src="./images/about/about_people.jpg", alt="Courtney Henry")
+              .about-person-info
+                span.about-person-name Courtney Henry
+                span.about-person-bio CEO Andarafish
+            .about-right
+              include ../icons/_icon-star
+              span.about-point 4.3
+  .about-dot
+    include ../icons/_icon-dot

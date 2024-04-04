@@ -1,0 +1,126 @@
+@use "../../abstracts" as abst;
+
+.about {
+  margin-block: 240px 120px;
+  position: relative;
+
+  &-tagline {
+    position: relative;
+    padding-top: 8px;
+
+    &::before {
+      content: "";
+      @include abst.size(32px, 1px);
+      background-color: abst.$Yellow-500;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+  }
+
+  &-heading {
+    text-align: center;
+    font-size: 32px;
+    line-height: normal;
+    margin-block: 12px 40px;
+  }
+
+  &-list {
+    display: grid;
+    grid-auto-columns: 740px;
+    grid-auto-flow: column;
+    gap: 56px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    min-height: 505px;
+
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+
+    & > * {
+      scroll-snap-align: start;
+    }
+  }
+
+  &-item {
+    position: relative;
+  }
+
+  &-info {
+    @include abst.size(612px, 249px);
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 9px 32px 0px rgba(89, 92, 219, 0.05);
+    position: absolute;
+    top: 256px;
+    left: 64px;
+  }
+
+  &-title {
+    font-size: 20px;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  &-caption {
+    line-height: calc(24 / 14);
+    opacity: 0.75;
+    margin-block: 16px 24px;
+  }
+
+  &-person {
+    @include abst.flexBox(
+      ((align-items: center, justify-content: space-between))
+    );
+
+    &-image {
+      @include abst.size(40px);
+      border-radius: 100rem;
+      box-shadow: 0px 9px 32px 0px rgba(89, 92, 219, 0.1);
+    }
+
+    &-info {
+      @include abst.flexBox(((flex-direction: column, gap: 4px)));
+    }
+
+    &-name,
+    &-bio {
+      @include abst.fontWeight("medium");
+      line-height: calc(22 / 14);
+    }
+
+    &-name {
+      color: abst.$Neutral-900;
+    }
+
+    &-bio {
+      color: abst.$Neutral-500;
+    }
+  }
+
+  &-left {
+    @include abst.flexBox(((align-items: center, gap: 24px)));
+  }
+
+  &-right {
+    @include abst.flexBox(((align-items: center, gap: 16px)));
+  }
+
+  &-point {
+    color: abst.$Neutral-700;
+    font-size: 20px;
+    @include abst.fontWeight("semibold");
+    line-height: calc(28 / 20);
+  }
+
+  &-dot {
+    margin-top: 32px;
+    @include abst.flexBox(((align-items: center, justify-content: center)));
+  }
+}

@@ -1,0 +1,38 @@
+@use "../../abstracts" as abst;
+
+.about {
+  margin-top: 240px;
+
+  &-tagline {
+    position: relative;
+    padding-top: 8px;
+
+    &::before {
+      content: "";
+      @include abst.size(32px, 1px);
+      background-color: abst.$Yellow-500;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+  }
+
+  &-heading {
+    text-align: center;
+    font-size: 32px;
+    line-height: normal;
+    margin-block: 12px 40px;
+  }
+
+  &-list {
+    display: grid;
+    grid-auto-columns: 740px;
+    grid-auto-flow: column;
+    gap: 56px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+  }
+}
