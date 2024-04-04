@@ -10,25 +10,6 @@
     gap: 88px;
   }
 
-  &-blur {
-    & img:first-of-type,
-    & img:last-of-type {
-      position: absolute;
-    }
-
-    & img:first-of-type {
-      right: 0;
-      bottom: -25px;
-      z-index: -2;
-    }
-
-    & img:last-of-type {
-      right: 46px;
-      bottom: -20px;
-      z-index: -1;
-    }
-  }
-
   &-caption {
     max-width: 320px;
     line-height: calc(24 / 14);
@@ -43,7 +24,7 @@
 
     &-item {
       & .footer-socials-button {
-        @include abst.size(48px);
+        @include abst.size(41px);
         background-color: #fff;
         border-radius: 100rem;
         @include abst.flexBox(((align-items: center, justify-content: center)));
@@ -93,31 +74,6 @@
       color: abst.$Neutral-700;
       transition: 0.5s ease;
       z-index: 2;
-    }
-  }
-
-  &-heading {
-    color: abst.$Neutral-900;
-    font-size: 18px;
-    @include abst.fontWeight("semibold");
-    line-height: normal;
-    margin-bottom: 24px;
-  }
-
-  &-links {
-    @include abst.flexBox(((flex-direction: column, gap: 18px 0)));
-  }
-
-  &-link {
-    color: abst.$Neutral-500;
-    line-height: normal;
-    transition: all 0.3s linear;
-
-    &:hover {
-      text-shadow: 0.5px 0 0 currentColor;
-      color: abst.$App-Headline;
-      text-decoration: underline;
-      cursor: pointer;
     }
   }
 }

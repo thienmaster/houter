@@ -18,13 +18,13 @@
 
     & img:first-of-type {
       right: 0;
-      bottom: -25px;
+      bottom: -20px;
       z-index: -2;
     }
 
     & img:last-of-type {
-      right: 46px;
-      bottom: -20px;
+      right: 20px;
+      bottom: 0px;
       z-index: -1;
     }
   }

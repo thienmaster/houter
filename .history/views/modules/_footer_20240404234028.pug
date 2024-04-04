@@ -8,15 +8,18 @@ footer.footer
       ul.footer-socials-list
         li.footer-socials-item
           a.footer-socials-button
-            span.footer-socials-icon
+            //- i.fa-brands.fa-facebook-f.footer-socials-icon
+            i.footer-socials-icon
               include ../icons/_icon-facebook
         li.footer-socials-item
           a.footer-socials-button
-            span.footer-socials-icon
+            //- i.fa-brands.fa-twitter.footer-socials-icon
+            i.footer-socials-icon
               include ../icons/_icon-twitter
         li.footer-socials-item
           a.footer-socials-button
-            span.footer-socials-icon
+            //- i.fa-brands.fa-instagram.footer-socials-icon
+            i.footer-socials-icon
               include ../icons/_icon-instagram
     .footer-column
       h3.footer-heading Property
@@ -32,12 +35,9 @@ footer.footer
             a.footer-link(href="#!")= title
     .footer-column
       h3.footer-heading Contact
-      .footer-links
-        span.footer-link 2464 Royal Ln. Mesa, New Jersey 45463
-        span.footer-link (671) 555-0110
-        span.footer-link info@houter.com
-  .footer-blur
-    each blur in [{src: "./images/footer/footer_blur.svg", alt: "blur_1"}, {src: "./images/footer/footer_blur_2.svg", alt: "blur_2"}]
-      img(src= blur.src, alt= blur.alt)
+      .footer-contact
+        span 2464 Royal Ln. Mesa, New Jersey 45463
+        span (671) 555-0110
+        span info@hounter.com
 
 

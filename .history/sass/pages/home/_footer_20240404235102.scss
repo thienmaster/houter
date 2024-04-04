@@ -10,25 +10,6 @@
     gap: 88px;
   }
 
-  &-blur {
-    & img:first-of-type,
-    & img:last-of-type {
-      position: absolute;
-    }
-
-    & img:first-of-type {
-      right: 0;
-      bottom: -25px;
-      z-index: -2;
-    }
-
-    & img:last-of-type {
-      right: 46px;
-      bottom: -20px;
-      z-index: -1;
-    }
-  }
-
   &-caption {
     max-width: 320px;
     line-height: calc(24 / 14);
@@ -101,7 +82,6 @@
     font-size: 18px;
     @include abst.fontWeight("semibold");
     line-height: normal;
-    margin-bottom: 24px;
   }
 
   &-links {
@@ -114,9 +94,8 @@
     transition: all 0.3s linear;
 
     &:hover {
-      text-shadow: 0.5px 0 0 currentColor;
+      text-shadow: 1px 0 0 currentColor;
       color: abst.$App-Headline;
-      text-decoration: underline;
       cursor: pointer;
     }
   }
