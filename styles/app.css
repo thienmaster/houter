@@ -426,14 +426,17 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  transition: all 0.23s linear;
+}
+.featured-item:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+.featured-item:hover .featured-image {
+  opacity: 0.85;
 }
 .featured-image {
   position: relative;
-  transition: all 0.3s linear;
-}
-.featured-image:hover {
-  opacity: 0.85;
-  cursor: pointer;
 }
 .featured-status {
   display: flex;

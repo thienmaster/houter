@@ -122,7 +122,7 @@
 
   &-item {
     @include abst.flexBox(((flex-direction: column, gap: 24px)));
-    transition: all 0.23s linear;
+    transition: all 0.25s linear;
 
     &:hover {
       transform: translateY(-10px);

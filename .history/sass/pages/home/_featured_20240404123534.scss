@@ -122,20 +122,22 @@
 
   &-item {
     @include abst.flexBox(((flex-direction: column, gap: 24px)));
-    transition: all 0.23s linear;
+    transition: all 0.2s linear;
 
     &:hover {
       transform: translateY(-10px);
       cursor: pointer;
-
-      & .featured-image {
-        opacity: 0.85;
-      }
     }
   }
 
   &-image {
     position: relative;
+    transition: all 0.3s linear;
+
+    &:hover {
+      opacity: 0.85;
+      cursor: pointer;
+    }
   }
 
   &-status {
