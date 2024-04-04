@@ -84,7 +84,7 @@
     top: 0;
     right: 0;
     z-index: -2;
-    overflow-x: hidden;
+    // overflow-x: hidden;
   }
 
   &-vector {
@@ -107,27 +107,28 @@
   }
 
   &-info {
-    // display: grid;
-    // grid-auto-columns: auto;
-    // grid-auto-flow: column;
-    // overflow-x: auto;
-    // overflow-y: hidden;
-    // scroll-snap-type: x mandatory;
-    // scroll-snap-stop: always;
-    // column-gap: 16px;
-    // &::-webkit-scrollbar {
-    //   display: none;
-    //   width: 0;
-    // }
-
-    // & > * {
-    //   scroll-snap-align: start;
-    // }
-    width: 872px;
-    @include abst.flexBox(((align-items: center, gap: 16px)));
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    column-gap: 16px;
+    // width: 872px;
+    // @include abst.flexBox(((align-items: center, gap: 16px)));
     position: absolute;
     left: 48px;
     bottom: 48px;
+
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+
+    & > * {
+      scroll-snap-align: start;
+    }
 
     &-content {
       @include abst.flexBox(((align-items: center, gap: 16px)));
