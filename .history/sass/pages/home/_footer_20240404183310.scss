@@ -1,0 +1,12 @@
+@use "../../abstracts" as abst;
+
+.footer {
+  padding-bottom: 120px;
+  position: relative;
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 88px;
+  }
+}

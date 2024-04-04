@@ -1,0 +1,13 @@
+section.subscribe
+  .container.subscribe-container
+    .subscribe-image
+      each image [{src: "./images/subscribe/subscribe.jpg", alt: "image_1"}, {src: "./images/subscribe/subscribe_2.jpg", alt: "image_2"}, {src: "./images/subscribe/subscribe_3.jpg", alt: "image_3"}, {src: "./images/subscribe/subscribe_4.png", alt: "image_4"}, {src: "./images/subscribe/subscribe_5.jpg", alt: "image_5"}, {src: "./images/subscribe/subscribe_6.jpg", alt: "image_6"}, {src: "./images/subscribe/subscribe_7.jpg", alt: "image_7"}, {src: "./images/subscribe/subscribe_8.jpg", alt: "image_8"}]
+        img(src= image.src, alt= image.alt)
+    .subscribe-info
+      h2.heading.subscribe-heading Subscribe For More Info and update from Houter
+      .subscribe-now
+        .subscribe-email
+          include ../icons/_icon-email
+          input.subscribe-email-text(type="text", placeholder="Your email here")
+        a.button.button-green-500.subscribe-button Subsribe Now
+

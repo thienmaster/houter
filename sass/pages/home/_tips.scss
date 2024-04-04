@@ -1,0 +1,146 @@
+@use "../../abstracts" as abst;
+
+.tips {
+  position: relative;
+
+  &-blur {
+    & img:first-of-type,
+    & img:last-of-type {
+      position: absolute;
+      left: 0;
+    }
+
+    & img:first-of-type {
+      top: -200px;
+      z-index: -2;
+    }
+
+    & img:last-of-type {
+      top: 70px;
+      z-index: -1;
+    }
+  }
+
+  &-tagline {
+    position: relative;
+    padding-top: 8px;
+
+    &::before {
+      content: "";
+      @include abst.size(32px, 1px);
+      background-color: abst.$Yellow-500;
+      position: absolute;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+  }
+
+  &-heading {
+    font-size: 32px;
+    line-height: normal;
+    text-transform: capitalize;
+    max-width: 425px;
+    text-align: center;
+    margin: 12px auto 24px;
+  }
+
+  &-button {
+    display: block;
+    padding: 12px 16px;
+    color: #fff;
+    @include abst.fontWeight("semibold");
+    line-height: calc(22 / 14);
+    margin: 0 auto 42px;
+    transition: all 0.3s linear;
+
+    &:hover {
+      opacity: 0.85;
+      cursor: pointer;
+    }
+  }
+
+  &-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 68px;
+
+    &-left {
+      @include abst.flexBox(((flex-direction: column, gap: 44px 0)));
+    }
+  }
+
+  &-article {
+    @include abst.flexBox(((align-items: center, gap: 32px)));
+    transition: all 0.3s linear;
+
+    &:hover {
+      transform: translateY(-10px);
+      cursor: pointer;
+
+      & .tips-article-image {
+        opacity: 0.85;
+      }
+    }
+
+    &-title {
+      color: abst.$App-Headline;
+      font-size: 18px;
+      @include abst.fontWeight("medium");
+      line-height: calc(32 / 18);
+      text-transform: capitalize;
+      margin-block: 12px 16px;
+    }
+  }
+
+  &-person {
+    @include abst.flexBox(((align-items: center, gap: 16px)));
+
+    &-image {
+      @include abst.size(32px);
+      border-radius: 100rem;
+      box-shadow: 0px 9px 32px 0px rgba(89, 92, 219, 0.1);
+    }
+
+    &-name {
+      flex: 1 0 0;
+      color: abst.$Neutral-700;
+      line-height: calc(22 / 14);
+    }
+  }
+
+  &-access-time {
+    @include abst.flexBox(((align-items: center, gap: 12px)));
+  }
+
+  &-time {
+    color: abst.$Neutral-500;
+    line-height: calc(24 / 14);
+  }
+
+  &-image:hover {
+    opacity: 0.85;
+    cursor: pointer;
+  }
+
+  &-info {
+    margin-top: 24px;
+  }
+
+  &-title {
+    color: abst.$App-Headline;
+    font-size: 24px;
+    @include abst.fontWeight("medium");
+    line-height: calc(32 / 24);
+    text-transform: capitalize;
+    margin: 12px 0;
+    cursor: pointer;
+  }
+
+  &-caption {
+    line-height: calc(24 / 14);
+    opacity: 0.75;
+    margin-bottom: 16px;
+  }
+}

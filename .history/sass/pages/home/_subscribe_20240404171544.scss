@@ -1,0 +1,9 @@
+@use "../../abstracts" as abst;
+
+.subscribe {
+  &-container {
+    background-image: url("../images/subscribe/subscribe.svg");
+    min-height: 312px;
+    width: 1200px;
+  }
+}

@@ -1,0 +1,23 @@
+@use "../../abstracts" as abst;
+
+.footer {
+  padding-bottom: 120px;
+  position: relative;
+
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+    gap: 88px;
+  }
+
+  &-caption {
+    max-width: 320px;
+    line-height: calc(24 / 14);
+    opacity: 0.75;
+    margin-block: 16px 24px;
+  }
+
+  &-socials {
+    @include abst.flexBox(((align-items: center, gap: 0 24px)));
+  }
+}

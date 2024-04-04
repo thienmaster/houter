@@ -1,0 +1,130 @@
+@use "../../abstracts" as abst;
+
+.subscribe {
+  margin: 120px 0;
+
+  &-container {
+    @include abst.size(1200px, 312px);
+    background-image: url("../images/subscribe/subscribe.svg");
+    position: relative;
+  }
+
+  &-image {
+    & img {
+      position: absolute;
+
+      flex-shrink: 0;
+      border: 2px solid #fff;
+    }
+
+    & img:first-of-type,
+    & img:nth-of-type(3),
+    & img:nth-of-type(6),
+    img:last-of-type {
+      border-radius: 24px;
+    }
+
+    & img:nth-of-type(2),
+    & img:nth-of-type(4),
+    & img:nth-of-type(5),
+    & img:nth-of-type(7) {
+      @include abst.size(36px);
+      border-radius: 100rem;
+      box-shadow: 0px 9px 32px 0px rgba(89, 92, 219, 0.1);
+    }
+
+    & img:first-of-type {
+      @include abst.size(81px);
+      left: 44px;
+      top: 38px;
+    }
+
+    & img:nth-of-type(2) {
+      left: 204px;
+      top: 71px;
+    }
+
+    & img:nth-of-type(3) {
+      @include abst.size(70px);
+      right: 200px;
+      top: 44px;
+    }
+
+    & img:nth-of-type(4) {
+      right: 82px;
+      top: 107px;
+    }
+
+    & img:nth-of-type(5) {
+      left: 67px;
+      bottom: 103px;
+    }
+
+    & img:nth-of-type(6) {
+      @include abst.size(54px);
+      left: 195px;
+      bottom: 80px;
+    }
+
+    & img:nth-of-type(7) {
+      right: 200px;
+      bottom: 133px;
+    }
+
+    & img:last-of-type {
+      @include abst.size(55px);
+      right: 73px;
+      bottom: 60px;
+    }
+  }
+
+  &-info {
+    @include abst.flexBox(
+      ((flex-direction: column, align-items: center, gap: 32px 0))
+    );
+    padding-top: 65px;
+  }
+
+  &-heading {
+    max-width: 425px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 32px;
+    line-height: calc(48 / 32);
+    text-transform: capitalize;
+  }
+
+  &-now {
+    @include abst.flexBox(((align-items: center, gap: 16px)));
+    padding: 4px 4px 4px 24px;
+    border-radius: 32px;
+    background-color: #fff;
+    box-shadow: 0px 9px 32px 0px rgba(89, 92, 219, 0.05);
+    width: 496px;
+  }
+
+  &-email {
+    @include abst.flexBox(((align-items: center, gap: 16px)));
+    flex: 1 0 0;
+
+    &-text {
+      color: abst.$Neutral-500;
+      @include abst.fontWeight("medium");
+      line-height: calc(22 / 14);
+      flex: 1 0 0;
+    }
+  }
+
+  &-button {
+    padding: 12px 16px;
+    color: #fff;
+    @include abst.fontWeight("semibold");
+    line-height: calc(22 / 14);
+    transition: all 0.3s linear;
+
+    &:hover {
+      opacity: 0.85;
+      cursor: pointer;
+    }
+  }
+}

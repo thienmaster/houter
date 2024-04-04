@@ -1,0 +1,37 @@
+@use "../../abstracts" as abst;
+
+.tips {
+  &-tagline {
+    position: relative;
+    padding-top: 8px;
+
+    &::before {
+      content: "";
+      @include abst.size(32px, 1px);
+      background-color: abst.$Yellow-500;
+      position: absolute;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+  }
+
+  &-heading {
+    font-size: 32px;
+    line-height: normal;
+    text-transform: capitalize;
+    max-width: 425px;
+    text-align: center;
+    margin: 12px auto 24px;
+  }
+
+  &-button {
+    display: inline-block;
+    padding: 12px 16px;
+    color: #fff;
+    @include abst.fontWeight("semibold");
+    line-height: calc(22 / 14);
+    margin: 0 auto;
+  }
+}

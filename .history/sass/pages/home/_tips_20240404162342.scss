@@ -1,0 +1,28 @@
+@use "../../abstracts" as abst;
+
+.tips {
+  &-tagline {
+    position: relative;
+    padding-top: 8px;
+
+    &::before {
+      content: "";
+      @include abst.size(32px, 1px);
+      background-color: abst.$Yellow-500;
+      position: absolute;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+  }
+
+  &-heading {
+    text-align: center;
+    font-size: 32px;
+    line-height: normal;
+    text-transform: capitalize;
+    max-width: 422px;
+    margin: 0 auto;
+  }
+}

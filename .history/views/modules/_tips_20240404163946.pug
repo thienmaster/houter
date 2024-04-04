@@ -1,0 +1,30 @@
+section.tips
+  .container
+    .tips-top
+      h3.tagline.tips-tagline See tips and trick from our partnership
+      h2.heading.tips-heading Find out more about selling and buying homes
+      button.button.button-green-500.tips-button More Artikel
+    .tips-content
+      .tips-content-left
+        each val in [1,2,3]
+          .tips-article
+            img.tips-article-image(src="../../images/tips/tips.svg", alt="")
+            .tips-article-info
+              .tips-person
+                img.tips-person-image(src="../../images/tips/tips_people.jpg", alt="")
+                span.tips-person-name Dianne Russell
+              h3.tips-article-title The things we need to check when we want to buy a house
+              .tips-access-time
+                include ../icons/_icon-access-time
+                span.tips-time 4 min read | 25 Apr 2021
+      .tips-content-right
+        img.tips-image(src="./images/tips/tips_4.svg", alt="12 Things to know before buying a house")
+        .tips-info
+          .tips-person
+            img.tips-person-image(src="./images/tips/tips_people_4.jpg", alt="Cameron Williamson")
+            span.tips-person-name Cameron Williamson
+          h3.tips-title 12 Things to know before buying a house
+          p.tips-caption Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house
+          .tips-access-time
+            include ../icons/_icon-access-time
+            span.tips-time 8 min read | 25 Apr 2021

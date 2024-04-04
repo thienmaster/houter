@@ -1,0 +1,11 @@
+@use "../../abstracts" as abst;
+
+.subscribe {
+  margin: 120px 0;
+
+  &-container {
+    @include abst.size(1200px, 312px);
+    background-image: url("../images/subscribe/subscribe.svg");
+    position: relative;
+  }
+}

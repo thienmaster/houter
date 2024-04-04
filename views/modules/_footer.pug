@@ -1,0 +1,34 @@
+footer.footer
+  .container.footer-container
+    .footer-column
+      a.logo(href="./")
+        img.logo-image(src="./images/logo.svg", alt="logo_hunter")
+        span.logo-text Houter
+      p.footer-caption We provide information about properties such as houses, villas and apartments to help people find their dream home
+      .footer-socials
+        a.footer-socials-button
+          i.fa-brands.fa-facebook-f.footer-socials-icon
+        a.footer-socials-button
+          i.fa-brands.fa-twitter.footer-socials-icon
+        a.footer-socials-button
+          i.fa-brands.fa-instagram.footer-socials-icon
+    .footer-column
+      h3.footer-heading Property
+      ul.footer-links
+        each title in ["House", "Apartment", "Villa"]
+          li.footer-links-item
+            a.footer-link(href="#!")= title
+    .footer-column
+      h3.footer-heading Article
+      ul.footer-links
+        each title in ["New Article", "Popular Article", "Most Read", "Tips & Tricks"]
+          li.footer-links-item
+            a.footer-link(href="#!")= title
+    .footer-column
+      h3.footer-heading Contact
+      .footer-contact
+        span 2464 Royal Ln. Mesa, New Jersey 45463
+        span (671) 555-0110
+        span info@hounter.com
+
+

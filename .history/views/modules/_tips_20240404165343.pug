@@ -1,0 +1,30 @@
+-
+  var tips_list = [
+    {article_image: "./images/tips/tips.svg", article_alt: "The things we need to check when we want to buy a house", person_image: "./images/tips/tips_people.jpg", person_alt: "Dianne Russell", person_name: "Dianne Russell", article_title: "The things we need to check when we want to buy a house", time: "4 min read | 25 Apr 2021"},
+
+    {article_image: "./images/tips/tips_2.svg", article_alt: "7 Ways to distinguish the quality of the house we want to buy", person_image: "./images/tips/tips_people_2.jpg", person_alt: "Courtney Henry", person_name: "Courtney Henry", article_title: "7 Ways to distinguish the quality of the house we want to buy", time: "6 min read | 24 Apr 2021"},
+
+    {article_image: "./images/tips/tips_3.svg", article_alt: "The best way to know the quality of the house we want to buy", person_image: "./images/tips/tips_people_3.jpg", person_alt: "Darlene Robertson", person_name: "Darlene Robertson", article_title: "The best way to know the quality of the house we want to buy", time: "2 min read | 24 Apr 2021"}
+  ];
+
+section.tips
+  .container
+    .tips-top
+      h3.tagline.tips-tagline See tips and trick from our partnership
+      h2.heading.tips-heading Find out more about selling and buying homes
+      button.button.button-green-500.tips-button More Artikel
+    .tips-content
+      .tips-content-left
+        each tips_item in tips_list
+          +tipsItem(tips_item.article_image, tips_item.article_alt, tips_item.person_image, tips_item.person_alt, tips_item.person_name, tips_item.article_title, tips_item.time)
+      .tips-content-right
+        img.tips-image(src="./images/tips/tips_4.svg", alt="12 Things to know before buying a house")
+        .tips-info
+          .tips-person
+            img.tips-person-image(src="./images/tips/tips_people_4.jpg", alt="Cameron Williamson")
+            span.tips-person-name Cameron Williamson
+          h3.tips-title 12 Things to know before buying a house
+          p.tips-caption Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house
+          .tips-access-time
+            include ../icons/_icon-access-time
+            span.tips-time 8 min read | 25 Apr 2021
